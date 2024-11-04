@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>our car Website</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; 
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        header,footer {
+            background: linear-gradient(to right, #818488, #9013fe);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .container {
+            display: flex;
+            flex-grow: 1;
+        }
+        .sidebar {
+            width: 200px; 
+            background-color: #f4f4f4;
+            padding: 15px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .main-content {
+            flex: 1; 
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .carousel {
+            position: relative;
+            max-width: 100%; 
+            margin: auto;
+        }
+        .carousel-images {
+    display: none; 
+    width: 100%; 
+    max-width: 300px; 
+    height: auto;
+        }
+
+        .active {
+            display: block; 
+        }
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+         /* Media Queries */
+         @media (max-width: 768px) {
+            .sidebar {
+                width: 100%; /* Full width on smaller screens */
+                flex: 1 0 100%; /* Allow sidebar to take full width */
+                box-shadow: none; /* Remove shadow for cleaner look */
+            }
+            .main-content {
+                flex: 1 0 100%; /* Allow main content to take full width */
+                padding: 10px; /* Adjust padding */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header, footer {
+                padding: 15px; /* Reduce padding */
+            }
+            nav a {
+                padding: 8px 10px; /* Adjust padding for nav links */
+            }
+            .carousel-images {
+                max-width: 100%; /* Ensure carousel images are responsive */
+            }
+            .carousel-button {
+                padding: 5px; /* Smaller buttons on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Collection</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="collections.html">collections</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Additional resources</h2>
+            <h3>Video</h3>
+            <video controls width="180">
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        
+            <h3>Audio</h3>
+<div style="width: 200px;">
+    <audio controls style="width: 100%;">
+        <source src="audio.mp3" type="audio/ogg">
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+    <p>pdf</p>
+    <a href="car.pdf" target="_blank">View PDF</a>
+
+</div>
+ <p> Other sites</p>
+
+            <ul>
+                <li><a href="https://www.cardekho.com/mostpopularcars">mostpopularcars</a></li>
+                <li><a href="https://www.hondacarindia.com/">hondacarindia</a></li>
+                <li><a href="https://www.rolls-roycemotorcars.com/en_GB/home.html">rolls-roycemotorcars</a></li>
+            </ul>
+            <p></p>
+            <br>
+            <li><a href="about.html" style="color: white;"> <span style="color: gold;">content 1 </span></a></li> <BR></BR>
+            <li><a href="collections.html" style="color: white;"> <span style="color: gold;">content 2</span></a></li> <BR></BR>
+            <li><a href="contact.html" style="color: white;"> <span style="color: gold;">Contact </span></a></li> <BR></BR>
+        </div>
+
+        <div class="main-content">
+            <h1>explore further</h1>
+            <div class="carousel">
+                <img class="carousel-images active" src="img1/lam.jpeg" alt="Image 1">
+                <img class="carousel-images" src="img1/aston_martin.jpg" alt="Image 2">
+                <img class="carousel-images" src="img1/ferrari.png" alt="Image 3">
+                
+                <div class="carousel-buttons">
+                    <button class="carousel-button" onclick="changeSlide(-1)">&#10094;</button>
+                    <button class="carousel-button" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+            </div>
+            <p>
+                Tragedy struck on August 31, 1869, when Ward, a passenger in a steam-powered car built by her cousins in Parsonstown, Ireland, was involved in a fatal accident</p>
+       <p>September 20, 1914
+        This was the first car accident in India. The accident took place on September 20, 1914 at Kuttitheruvu, east of Kayamkulam. The injured, Valiya Koil Thampuran (69), died on the 22nd. He was the first person to die in a road accident in the country</p>
+           <p>By 1927 replacement demand for new cars was exceeding demand from first-time owners and multiple-car purchasers combined. Given the incomes of the day, automakers could no longer count on an expanding market. Installment sales had been initiated by the makers of moderately priced cars in 1916 to compete with the Model T, and by 1925 about three-quarters of all new cars were bought “on time” through credit.
+
+            Although a few expensive items, such as pianos and sewing machines, had been sold on time before 1920, it was installment sales of automobiles during the twenties that established the purchasing of expensive consumer goods on credit as a middle-class habit and a mainstay of the American economy.</p>
+           <p>Thus engineering was subordinated to the dictates of stylists and cost-cutting accountants. General Motors became the archetype of a rational corporation run by a technostructure.
+
+            As Sloanism replaced Fordism as the predominant market strategy in the industry, Ford lost the sales lead in the lucrative low-priced field to Chevrolet in 1927 and 1928. By 1936 GM claimed 43 percent of the U.S. market; Ford with 22 percent had fallen to third place behind Chrysler with 25 percent.
+            
+            Although automobile sales collapsed during the Great Depression, Sloan could boast of GM that “in no year did the corporation fail to earn a profit.” (GM retained industry leadership until 1986 when Ford surpassed it in profits.)</p>
+           <p>The automobile industry had played a critical role in producing military vehicles and war matériel in the First World War. During World War II, in addition to turning out several million military vehicles, American automobile manufacturers made some seventy-five essential military items, most of them unrelated to the motor vehicle. These materials had a total value of $29 billion, one-fifth of the nation’s war production.
+
+            Because the manufacture of vehicles for the civilian market ceased in 1942 and tires and gasoline were severely rationed, motor vehicle travel fell dramatically during the war years. Cars that had been nursed through the Depression long after they were ready to be junked were patched up further, ensuring great pent-up demand for new cars at the war’s end.
+            
+            Detroit’s Big Three carried Sloanism to its illogical conclusion in the postwar period. Models and options proliferated, and every year cars became longer and heavier, more powerful, more gadget-bedecked, more expensive to purchase and to operate, following the truism that large cars are more profitable to sell than small ones.</p>
+        </div>
+
+        <div class="sidebar">
+            <h2></h2>
+           <p>Market saturation coincided with technological stagnation: In both product and production technology, innovation was becoming incremental rather than dramatic. The basic differences that distinguish post-World War II models from the Model T were in place by the late 1920s—the self-starter, the closed all-steel body, the high-compression engine, hydraulic brakes, syncromesh transmission and low-pressure balloon tires.
+
+            The remaining innovations—the automatic transmission and drop-frame construction—came in the 1930s. Moreover, with some exceptions, cars were made much the same way in the early 1950s as they had been in the 1920s.
+            
+            To meet the challenges of market saturation and technological stagnation, General Motors under the leadership of Alfred P. Sloan, Jr., in the 1920s and 1930s innovated planned obsolescence of product and put a new emphasis on styling, exemplified in the largely cosmetic annual model change—a planned triennial major restyling to coincide with the economics of die life and with annual minor face-liftings in between.
+                       
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Website. All rights reserved.&bull; &hearts;</p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-images');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) {
+                currentSlide = slides.length - 1; 
+            } else if (currentSlide >= slides.length) {
+                currentSlide = 0; 
+            }
+            showSlide(currentSlide);
+        }
+ 
+        setInterval(() => changeSlide(1), 5000);
+    </script>
+
+</body>
+</html>
